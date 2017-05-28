@@ -6,7 +6,10 @@ Binaries/*
 DerivedDataCache/*
 Intermediate/*
 Saved/*
-BuildingEscape/Content/StarterContent/**
+
+Content/StarterContent/*
+
+*_BuiltData.uasset
 
 ######################
 # VS Generated Files #
