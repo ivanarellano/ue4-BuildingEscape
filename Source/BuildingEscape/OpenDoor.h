@@ -24,14 +24,21 @@ protected:
 	virtual void BeginPlay() override;
 
 	void OpenDoor();
+	void CloseDoor();
 
 private:
 
-	UPROPERTY(VisibleAnywhere)
-	float OpenAngle = 90.f;
+	UPROPERTY(EditAnywhere)
+	float OpenAngle = -90.f;
 
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate;
 
+	UPROPERTY(EditAnywhere)
+	float DoorCloseDelay = 1.f;
+
+	float LastDoorOpenTime{ 0.f };
+
+	AActor* Owner;
 	AActor* ActorThatOpens; // Pawn inherits from Actor
 };
